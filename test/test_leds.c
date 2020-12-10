@@ -59,11 +59,16 @@ void test_apagar_todos_los_led(void){
 }
 
 //Se puede consultar el estado de un LED
-void test_consultar_el_estado_de_un_led(void){
+void test_consultar_el_estado_prendido_de_un_led(void){
     Leds_On(3);
     TEST_ASSERT_EQUAL_HEX16(1, Led_State(3));
 }
 
+void test_consultar_el_estado_apagado_de_un_led(void){
+
+    TEST_ASSERT_EQUAL_HEX16(0, Led_State(3));
+
+}
 
 /*
 void test_inicializacion(void){
